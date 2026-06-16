@@ -2,6 +2,8 @@ package com.cibertec.model;
 
 import java.util.List;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
@@ -17,6 +19,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@DynamicUpdate
 @Data
 @Table(name="cine")
 @NoArgsConstructor
