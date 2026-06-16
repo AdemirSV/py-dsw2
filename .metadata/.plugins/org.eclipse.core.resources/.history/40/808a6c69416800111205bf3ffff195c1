@@ -1,0 +1,26 @@
+package com.cibertec.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@Table(name="sala")
+@AllArgsConstructor
+@NoArgsConstructor
+public class Sala {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer idSala;
+	private String numSala;
+	private Integer capacidad;
+	private String tipoPantalla;
+
+}
